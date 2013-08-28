@@ -9,5 +9,5 @@ gem 'minitest-chef-handler'
 
 platforms :mswin, :mingw do
   gem 'ruby-wmi'
-  gem 'win32-service', '0.7.2'
+  gem 'win32-service'
 end
