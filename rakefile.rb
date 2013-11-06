@@ -12,4 +12,9 @@ FoodCritic::Rake::LintTask.new do |t|
 end
 
 Tailor::RakeTask.new
-Vagrant::RakeTask.new
+
+Vagrant::RakeTask.new :vagrant_vmware do |t|
+  t.provider = :vmware_fusion
+end
+
+Vagrant::RakeTask.new :vagrant
