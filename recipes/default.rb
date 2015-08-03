@@ -40,6 +40,7 @@ windows_package package_name do
   checksum checksum
   installer_type :custom
   options installer_cmd
-  action :install
+  success_codes [0, 42, 127, 3010]
+  action :install  
   notifies :request, 'windows_reboot[60]', :immediately
 end
